@@ -55,6 +55,6 @@ export const productsOption = [
 ];
 
 export const promoCodes = [
-  { code: "SNACK10", type: "percent", value: 10 },
-  { code: "SNACK50", type: "amount", value: 50 },
+  { code: "DISCOUNT10", type: "percent", value: 10 },
+  { code: "FLAT5K", type: "amount", value: 5000 },
 ];

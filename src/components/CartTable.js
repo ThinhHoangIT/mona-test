@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Table, InputNumber, Button, Input } from "antd";
+import { Table, InputNumber, Button, Select } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 
 import {
@@ -116,11 +116,18 @@ export default function CartTable({
       key: "promoCode",
       align: "center",
       render: (_, record) => (
-        <Input
-          placeholder="Nhập mã khuyến mãi"
+        <Select
+          placeholder="Chọn mã khuyến mãi"
           value={record.promoCode || ""}
-          onChange={(e) => handlePromoCodeChange(e.target.value, record.id)}
-        />
+          onChange={(value) => handlePromoCodeChange(value, record.id)}
+          style={{ width: "100%" }}
+        >
+          {promoCodes.map((promo) => (
+            <Select.Option key={promo.code} value={promo.code}>
+              {promo.code}
+            </Select.Option>
+          ))}
+        </Select>
       ),
     },
     {
