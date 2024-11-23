@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  height: 100%;
+
+  color: #000000;
+  background-color: #d3d3d3;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+html,
+#root {
+  height: 100%;
+}
